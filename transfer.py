@@ -10,6 +10,7 @@ outputname = 'output.csv'
 df = pd.read_csv(inputname)
 
 #列消去
+del df['installment']
 del df['id']
 del df['int_rate']
 del df['grade']
