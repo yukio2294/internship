@@ -49,14 +49,14 @@ for index, verification_status in enumerate(verification_status):
 
 
 # 0で穴埋め
-df['mo_sin_old_il_acct'] = df['mo_sin_old_il_acct'].fillna(0)
-df['mths_since_recent_bc_dlq'] = df['mths_since_recent_bc_dlq'].fillna(0)
-df['mths_since_recent_revol_delinq'] = df['mths_since_recent_revol_delinq'].fillna(0)
-df['num_tl_120dpd_2m'] = df['num_tl_120dpd_2m'].fillna(0)
-df['mths_since_last_delinq'] = df['mths_since_last_delinq'].fillna(0)
-df['mths_since_last_record'] = df['mths_since_last_record'].fillna(0)
-df['mths_since_last_major_derog'] = df['mths_since_last_major_derog'].fillna(0)
-df['il_util'] = df['il_util'].fillna(0)
+#df['mo_sin_old_il_acct'] = df['mo_sin_old_il_acct'].fillna(0)
+#df['mths_since_recent_bc_dlq'] = df['mths_since_recent_bc_dlq'].fillna(0)
+#df['mths_since_recent_revol_delinq'] = df['mths_since_recent_revol_delinq'].fillna(0)
+#df['num_tl_120dpd_2m'] = df['num_tl_120dpd_2m'].fillna(0)
+#df['mths_since_last_delinq'] = df['mths_since_last_delinq'].fillna(0)
+#df['mths_since_last_record'] = df['mths_since_last_record'].fillna(0)
+#df['mths_since_last_major_derog'] = df['mths_since_last_major_derog'].fillna(0)
+#df['il_util'] = df['il_util'].fillna(0)
 
 #出力
 df.to_csv(outputname, index = None)
