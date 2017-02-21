@@ -86,6 +86,7 @@ del df['tot_hi_cred_lim']
 del df['total_bal_ex_mort']
 del df['total_bc_limit']
 del df['total_il_high_credit_limit']
+del df['addr_state']
 
 # months を削除(int)
 df.term = df.term.str.extract('([0-9]+)')
@@ -120,6 +121,10 @@ df['is_good_customer'] = [(1 if v == 'yes' else 0) for v in df['is_good_customer
 home_ownerships = ['RENT', 'OWN', 'MORTGAGE', 'OTHER']
 for index, home_ownership in enumerate(home_ownerships):
     df['home_ownership'] = df['home_ownership'].mask(df['home_ownership'] == home_ownership, index)
+
+purposes = ['car', 'credit_card', 'debt_consolidation', 'home_improvement', 'house', 'major_purchase', 'medical', 'moving', 'renewable_energy', 'small_business', 'vacation', 'other']
+for index, purpose in enumerate(purposes):
+	df['purpose'] = df['purpose'].mask(df['purpose'] == purpose, index)
 
 # verification_status　を数値化
 #verification_status = ['Not Verified', 'Source Verified', 'Verified']
